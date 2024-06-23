@@ -10,7 +10,6 @@ def main() -> None:
     print("2. Calculate your final grade")
     print("3. Play rock-paper-scissors")
     print("4. Calculate the factorial of a number")
-    print("6. Play Beauchef Horrors' Game")
     choice = input("Enter your choice (number): ")
 
     if choice == '1':
@@ -21,8 +20,6 @@ def main() -> None:
         rock_paper_scissors()
     elif choice == "4":
         factorial()
-    elif choice == '6':
-        beauchef_horrors_game()
     else:
         print("Invalid choice")
 
@@ -74,34 +71,6 @@ def factorial_auxiliar(n: int) -> int:
     else:
         return n * factorial_auxiliar(n-1)
         
-def beauchef_horrors_game() -> None:
-    """ Play Beauchef Horrors' Game. """
-    print("Welcome to Beauchef Horrors' Game")
-    print("You are trapped in the school of engineering at Electrical Engineering Department")
-    print("You find yourself in the middle of the night, you can't see anything, near Sonia's market")
-    print("You have three options:")
-    print("1. Turn on your phone's flashlight")
-    print("2. Walk in the dark")
-    print("3. Do nothing")
-    choice = input("Enter your choice (number): ")
-
-    if choice == '1':
-        print("You turn on your phone's flashlight and you see a SEP test ready to slaughter you")
-        print("You had a heart attack and died")
-        print("You died. Game over.")
-    elif choice == '2':
-        print("You walk in the dark and you trip over a 110kV power cable")
-        print("You inmediately die electrocuted. Game over.")
-        print("You are now part of the Beauchef Horrors")
-    elif choice == '3':
-        print("You do nothing and you feel a presence behind you")
-        print("You turn around and you see Sonia")
-        print("You talk to her and you tell address her as 'tía', she gets mad, and locks you in the basement")
-        print("Nobody ever saw you again. Game over.")
-    else:
-        print("Invalid choice")
-        print("You win!")
-        print("Thanks for playing Beauchef Horrors' Game!")
 
 if __name__ == "__main__":
     main()
