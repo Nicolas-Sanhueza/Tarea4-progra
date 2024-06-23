@@ -5,8 +5,11 @@ Programa simple llamado Hello_world el cual contempla las siguientes funcionalid
 - Entrega la fecha actual al momento de ejecutar.
 - Calcula el promedio ponderado de una cierta asignatura.
 - Juega de manera aleatoria Piedra, Papel o Tijeras.
+-
+-
+- Juego de horror basado en texto de sobrevivir una noche en Beauchef.
 
 ## Miembros participantes y sus contribuciones:
-- **Marcelo Gatica**: 
+- **Marcelo Gatica**: Juego de Beauchef Horrors. 10/10 GOTY.
 - **Nicolás Sanhueza**: 
 - **Tomás Órdenes**: 
