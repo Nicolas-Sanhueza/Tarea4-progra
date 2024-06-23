@@ -9,6 +9,7 @@ def main() -> None:
     print("1. Print the date")
     print("2. Calculate your final grade")
     print("3. Play rock-paper-scissors")
+    print("4. Calculate the factorial of a number")
     print("6. Play Beauchef Horrors' Game")
     choice = input("Enter your choice (number): ")
 
@@ -18,6 +19,8 @@ def main() -> None:
         final_grade()
     elif choice == '3':
         rock_paper_scissors()
+    elif choice == "4":
+        factorial()
     elif choice == '6':
         beauchef_horrors_game()
     else:
@@ -53,6 +56,24 @@ def rock_paper_scissors() -> None:
     else:
         print("You lose!")
 
+
+def factorial() -> None:
+    """ Call a funcition to calculate the factorial of a number. """
+    user_choice = input("Enter a positive int number: ")
+    if type(int(user_choice)) != int:
+        print("The number chosen must be an int.")
+    elif int(user_choice) < 0:
+        print("The number chosen must be positive.")
+    else:
+        print(factorial_auxiliar(int(user_choice)))
+
+def factorial_auxiliar(n: int) -> int:
+    """ Calculte the factorial of a number.""" 
+    if (n == 0) or (n == 1):
+        return 1
+    else:
+        return n * factorial_auxiliar(n-1)
+        
 def beauchef_horrors_game() -> None:
     """ Play Beauchef Horrors' Game. """
     print("Welcome to Beauchef Horrors' Game")
@@ -81,5 +102,6 @@ def beauchef_horrors_game() -> None:
         print("Invalid choice")
         print("You win!")
         print("Thanks for playing Beauchef Horrors' Game!")
+
 if __name__ == "__main__":
     main()
