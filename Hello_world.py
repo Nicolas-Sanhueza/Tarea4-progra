@@ -9,6 +9,7 @@ def main() -> None:
     print("1. Print the date")
     print("2. Calculate your final grade")
     print("3. Play rock-paper-scissors")
+    print("5. Calculate binomial square (ax + b)^2")
     choice = input("Enter your choice (number): ")
 
     if choice == '1':
@@ -17,6 +18,8 @@ def main() -> None:
         final_grade()
     elif choice == '3':
         rock_paper_scissors()
+    elif choice == '5':
+        binomial_square()
     else:
         print("Invalid choice")
 
@@ -49,6 +52,16 @@ def rock_paper_scissors() -> None:
         print("You win!")
     else:
         print("You lose!")
+
+def binomial_square() -> None:
+    """ Calculate binomial square a^2 + 2ab + b^2. """
+    try:
+        a = float(input("Enter the value for a: "))
+        b = float(input("Enter the value for b: "))
+        result = (a + b) ** 2
+        print(f"The result of ({a} + {b})^2 is: {result}")
+    except ValueError:
+        print("Please enter valid numbers")
 
 if __name__ == "__main__":
     main()
