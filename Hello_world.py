@@ -10,6 +10,7 @@ def main() -> None:
     print("2. Calculate your final grade")
     print("3. Play rock-paper-scissors")
     print("4. Calculate the factorial of a number")
+    print("5. Calculate binomial square (ax + b)^2")
     print("6. Play Beauchef Horrors' Game")
     choice = input("Enter your choice (number): ")
 
@@ -21,6 +22,8 @@ def main() -> None:
         rock_paper_scissors()
     elif choice == "4":
         factorial()
+    elif choice == '5':
+        binomial_square()
     elif choice == '6':
         beauchef_horrors_game()
     else:
@@ -56,7 +59,6 @@ def rock_paper_scissors() -> None:
     else:
         print("You lose!")
 
-
 def factorial() -> None:
     """ Call a funcition to calculate the factorial of a number. """
     user_choice = input("Enter a positive int number: ")
@@ -73,6 +75,16 @@ def factorial_auxiliar(n: int) -> int:
         return 1
     else:
         return n * factorial_auxiliar(n-1)
+      
+def binomial_square() -> None:
+    """ Calculate binomial square a^2 + 2ab + b^2. """
+    try:
+        a = float(input("Enter the value for a: "))
+        b = float(input("Enter the value for b: "))
+        result = (a + b) ** 2
+        print(f"The result of ({a} + {b})^2 is: {result}")
+    except ValueError:
+        print("Please enter valid numbers")      
         
 def beauchef_horrors_game() -> None:
     """ Play Beauchef Horrors' Game. """
